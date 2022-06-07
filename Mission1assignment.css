@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Style for the header */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #7c9ef2;
+    color: white;
+}
+
+/* Animation sequence */
+@keyframes example {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(90deg);
+    }
+
+    50% {
+        transform: rotateZ(180deg);
+    }
+
+    75% {
+        transform: rotateZ(270deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* style for h1 */
+h1 {
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* right column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Image */
+.img {
+    width: 2px;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #7c9ef2;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+
+    .row {
+        flex-direction: column;
+    }
+}
